@@ -9,7 +9,8 @@ int main()
 {
 	NvAPI_Status status = NvAPI_Initialize();
 	if (status != NVAPI_OK) {
-		cout << "Erro" << endl;
+		cout << "Aconteceu um erro, pode ser que sua GPU nao seja da Nvidia ou seus drivers estao desatualizados." << endl;
+		cout << "Por favor, verifique as possibilidades acima." << endl;
 		return 1;
 	}
 	NvPhysicalGpuHandle gpuHandles[NVAPI_MAX_PHYSICAL_GPUS] = { 0 };
@@ -56,6 +57,9 @@ int main()
 	GlobalMemoryStatusEx(&memInfo);
 	double totalMemoriaGB = memInfo.ullTotalPhys / (1024.0 * 1024 * 1024);
 
+	cout << "======================" << endl;
+	cout << "INFORMACOES DO SISTEMA" << endl;
+	cout << "======================" << endl << endl;
 	cout << "CPU: " << nomeDaCPU << " - Nucleos: " << sysInfo.dwNumberOfProcessors << endl;
 	cout << "GPU: " << nomeDaGPU << " - Versao do Driver NVIDIA: " << fixed << setprecision(2) << versaoDriverDouble << " - Branch: " << branchString << endl;
 	cout << "RAM Total: " << fixed << setprecision(2) << totalMemoriaGB << " GB" << endl;
