@@ -11,6 +11,7 @@ int main()
 	if (status != NVAPI_OK) {
 		cout << "Aconteceu um erro, pode ser que sua GPU nao seja da Nvidia ou seus drivers estao desatualizados." << endl;
 		cout << "Por favor, verifique as possibilidades acima." << endl;
+		system("pause");
 		return 1;
 	}
 	NvPhysicalGpuHandle gpuHandles[NVAPI_MAX_PHYSICAL_GPUS] = { 0 };
