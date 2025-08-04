@@ -1,4 +1,4 @@
-## Diagnóstico de Sistema com NVAPI
+## Identificador de Hardware com NVAPI
 
 Este projeto é uma ferramenta leve, desenvolvida em C++, que exibe informações detalhadas sobre CPU, GPU NVIDIA e memória RAM do sistema. Utiliza a biblioteca proprietária **NVAPI** para obter dados diretamente da placa de vídeo.
 
